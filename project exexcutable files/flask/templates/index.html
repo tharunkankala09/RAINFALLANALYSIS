@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainfall Data Prediction in Agriculture</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0;
+            padding: 0;
+            background-image: url('/static/assets/index.jpg');
+            background-size: cover;
+            width: 100%;
+            color: #333;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #f1f1f1;
+            margin-bottom: 30px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1.2em;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        button a {
+            color: white;
+            text-decoration: none;
+        }
+        .typewriter {
+            overflow: hidden; /* Ensures the text is not revealed until the animation */
+            border-right: .20sem solid white; /* The typewriter cursor */
+            white-space: nowrap; /* Keeps the content on a single line */
+            margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+            letter-spacing: .15em; /* Adjust as needed */
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end;
+            color:rgb(178, 222, 39); 
+
+        }
+
+        /* The typing effect */
+        @keyframes typing {
+            from {
+                width: 0
+            }
+            to {
+                width: 100%
+            }
+        }
+
+        /* The typewriter cursor effect */
+        @keyframes blink-caret {
+            from, to {
+                border-color: transparent
+            }
+            50% {
+                border-color: orange
+            }
+        }
+    </style>
+</head>
+<body>
+    <img src='/static/assets/logo.png' height='110px' width='110px'>
+    <center>
+    </div class='container1'> 
+    <!-- Typewriter effect -->
+    <h1 class="typewriter">Wanna unlock the secret of skies?</h1>
+    <div class="container">
+        <form action="{{url_for('predict')}}" >
+        <h2>Rainfall Data Prediction in Agriculture</h2>
+        <p>Our website specializes in predicting rainfall data crucial for agricultural planning. Using advanced
+            meteorological models and historical data, we offer precise forecasts to assist farmers in optimizing crop
+            management and irrigation strategies. Our goal is to empower agricultural communities with reliable insights
+            for enhanced productivity and sustainability.</p>
+            
+            <button type="submit">Predict Now</button>
+        </form>
+       
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainfall Prediction</title>
+    <style>
+        body {
+            background: #B2BEB5;
+            color: #DFFFD6;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 150px;
+        }
+        .container {
+            background-color: black;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 1200px;
+            width: 100%;
+            box-sizing: border-box;
+            position: relative;
+        }
+        .navbar {
+            text-align: right;
+            padding-left:1000px;
+            padding-right:40px;
+           margin-bottom:-55px;
+
+        }
+        .navbar button {
+            background-color: #DFFFD6;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .navbar button:hover {
+            background-color: #CCE5CC;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            display: flex;
+            gap: 20px;
+        }
+        .column {
+            flex: 1;
+        }
+        .column:first-child {
+            margin-right: 10px;
+        }
+        .column:last-child {
+            margin-left: 10px;
+        }
+        label {
+            margin-bottom: 5px;
+            display: block;
+        }
+        input[type="text"] {
+            width: 500px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #D3D3D3; /* Light Gray */
+            color: black;
+        }
+        input[type="text"]::placeholder {
+            color: white;
+        }
+        button {
+            height: 40px;
+            width: 100%;
+            background-color: #DFFFD6;
+            color: black;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #CCE5CC;
+        }
+        img{
+            margin-bottom:-80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src='/static/assets/logo.png' height='110px' width='110px'>
+        <nav class="navbar">
+            <form action="{{url_for('index')}}" method="post">
+                <button type="submit">Home</button>
+            </form>
+
+        </nav>
+        <h1>Rainfall Prediction</h1>
+        <form id="rainfallForm" action="{{url_for('output')}}" method="post">
+            <div class="form-group">
+                <div class="column">
+                    <label for="date">Date</label>
+                    <input type="text" id="date" name="Date" placeholder="Date"><br>
+                    
+                    <label for="location">Location</label>
+                    <input type="text" id="location" name="Location" placeholder="Location"><br>
+                    
+                    <label for="minTemp">MinTemp</label>
+                    <input type="text" id="minTemp" name="MinTemp" placeholder="MinTemp"><br>
+                    
+                    <label for="maxTemp">MaxTemp</label>
+                    <input type="text" id="maxTemp" name="MaxTemp" placeholder="MaxTemp"><br>
+                    
+                    <label for="rainfall">Rainfall</label>
+                    <input type="text" id="rainfall" name="Rainfall" placeholder="Rainfall"><br>
+                    
+                    <label for="windGustSpeed">WindGustSpeed</label>
+                    <input type="text" id="windGustSpeed" name="WindGustSpeed" placeholder="WindGustSpeed"><br>
+                    
+                    <label for="windSpeed9am">Windspeed9am</label>
+                    <input type="text" id="windSpeed9am" name="WindSpeed9am" placeholder="WindSpeed9am"><br>
+                    
+                    <label for="windSpeed3pm">WindSpeed3pm</label>
+                    <input type="text" id="windSpeed3pm" name="WindSpeed3pm" placeholder="WindSpeed3pm"><br>
+
+                    <label for="humidity9am">Humidity9am</label>
+                    <input type="text" id="humidity9am" name="Humidity9am" placeholder="Humidity9am"><br>
+                </div>
+                <div class="column">
+                    <label for="humidity3pm">Humidity3pm</label>
+                    <input type="text" id="humidity3pm" name="Humidity3pm" placeholder="Humidity3pm"><br>
+                    
+                    <label for="pressure9am">Pressure9am</label>
+                    <input type="text" id="pressure9am" name="Pressure9am" placeholder="Pressure9am"><br>
+                    
+                    <label for="pressure3pm">Pressure3pm</label>
+                    <input type="text" id="pressure3pm" name="Pressure3pm" placeholder="Pressure3pm"><br>
+                    
+                    <label for="temp9am">Temp9am</label>
+                    <input type="text" id="temp9am" name="Temp9am" placeholder="Temp9am"><br>
+                    
+                    <label for="temp3pm">Temp3pm</label>
+                    <input type="text" id="temp3pm" name="Temp3pm" placeholder="Temp3pm"><br>
+                    
+                    <label for="rainToday">RainToday</label>
+                    <input type="text" id="rainToday" name="RainToday" placeholder="RainToday"><br>
+                    
+                    <label for="windGustDir">WindGustDir</label>
+                    <input type="text" id="windGustDir" name="WindGustDir" placeholder="WindGustDir"><br>
+                    
+                    <label for="windDir9am">WindDir9am</label>
+                    <input type="text" id="windDir9am" name="WindDir9am" placeholder="WindDir9am"><br>
+
+                    <label for="windDir3pm">WindDir3pm</label>
+                    <input type="text" id="windDir3pm" name="WindDir3pm" placeholder="WindDir3pm"><br>
+                </div>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
